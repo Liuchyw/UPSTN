@@ -1,0 +1,1 @@
+Table S5. METR-LA paired summaries (n=3). Joint-minus-Prototype uses δ=1. Penalties are On minus Off; J=DF−DP. Intervals are metric-wise descriptive 95% t intervals (df2), without multiplicity-adjusted significance claims.

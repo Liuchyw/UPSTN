@@ -1,0 +1,1 @@
+Panel (b): joint-model benchmark results. JiNan MAE/RMSE are normalized; METR-LA MAE/RMSE are in mph. MAPE is in percent.

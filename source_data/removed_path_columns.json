@@ -1,0 +1,22 @@
+{
+  "core/verified_result_inventory.csv": [
+    "metric_source"
+  ],
+  "core/factorial_per_seed.csv": [],
+  "core/deviation_per_seed.csv": [],
+  "core/paired_effects_and_intervals.csv": [],
+  "final/all_recomputed_metrics.csv": [
+    "checkpoint"
+  ],
+  "final/metrla_summary.csv": [],
+  "final/metrla_paired_differences.csv": [],
+  "final/jinan_weight_sensitivity.csv": [
+    "checkpoint"
+  ],
+  "final/jinan_weight_paired_gaps.csv": [],
+  "probes/gradients.csv": [],
+  "probes/gradient_seed_summary.csv": [],
+  "probes/representations.csv": [],
+  "probes/representation_error_associations.csv": [],
+  "probes/dim/local_v1_dim_probe.csv": []
+}

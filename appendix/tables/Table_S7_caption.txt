@@ -1,0 +1,1 @@
+Table S7. Step-12 representation summaries over five batches per seed. Feature dimension is 64; rank SD denotes within-seed batch variability.

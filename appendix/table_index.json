@@ -1,0 +1,74 @@
+[
+  {
+    "label": "Table S10",
+    "pdf": "appendix/tables/Table_S10.pdf",
+    "png": "appendix/tables/Table_S10.png",
+    "tex": "appendix/tables/Table_S10.tex",
+    "caption": "Table S10. DIM checkpoint diagnostic over five fixed batches. Variance is across nodes; rank is the effective rank. Original and augmented views use the same checkpoint. Balanced accuracy uses a probability threshold of 0.5.",
+    "in_main_manuscript": false
+  },
+  {
+    "label": "Table S9 (panel a)",
+    "pdf": "appendix/tables/Table_S9_panel_a.pdf",
+    "png": "appendix/tables/Table_S9_panel_a.png",
+    "tex": "appendix/tables/Table_S9_panel_a.tex",
+    "caption": "Table S9. Benchmark training settings (panel a). LR is initial learning rate; decay lists milestones. Warm-up is specific to the UPSTCN activation schedule; a dash in that column means not applicable. A decay dash means no milestone schedule is recorded. NR denotes an unrecorded fixed seed. AGCRN settings are taken from the reference configuration files.",
+    "in_main_manuscript": false
+  },
+  {
+    "label": "Table S9 (panel b)",
+    "pdf": "appendix/tables/Table_S9_panel_b.pdf",
+    "png": "appendix/tables/Table_S9_panel_b.png",
+    "tex": "appendix/tables/Table_S9_panel_b.tex",
+    "caption": "Panel (b): joint-model benchmark results. JiNan MAE/RMSE are normalized; METR-LA MAE/RMSE are in mph. MAPE is in percent.",
+    "in_main_manuscript": false
+  },
+  {
+    "label": "Table S2",
+    "pdf": "appendix/tables/Table_S2.pdf",
+    "png": "appendix/tables/Table_S2.png",
+    "tex": "appendix/tables/Table_S2.tex",
+    "caption": "Table S2. Core paired effects in normalized MAE, with metric-wise 95% t intervals. Mixed hardware estimates are exploratory; two-seed rows omit intervals.",
+    "in_main_manuscript": false
+  },
+  {
+    "label": "Table S4",
+    "pdf": "appendix/tables/Table_S4.pdf",
+    "png": "appendix/tables/Table_S4.png",
+    "tex": "appendix/tables/Table_S4.tex",
+    "caption": "Table S4. METR-LA test metrics from independently replayed validation-selected models. Physical MAE/RMSE in mph; MAPE in percent.",
+    "in_main_manuscript": false
+  },
+  {
+    "label": "Table S5",
+    "pdf": "appendix/tables/Table_S5.pdf",
+    "png": "appendix/tables/Table_S5.png",
+    "tex": "appendix/tables/Table_S5.tex",
+    "caption": "Table S5. METR-LA paired summaries (n=3). Joint-minus-Prototype uses δ=1. Penalties are On minus Off; J=DF−DP. Intervals are metric-wise descriptive 95% t intervals (df2), without multiplicity-adjusted significance claims.",
+    "in_main_manuscript": false
+  },
+  {
+    "label": "Table S6",
+    "pdf": "appendix/tables/Table_S6.pdf",
+    "png": "appendix/tables/Table_S6.png",
+    "tex": "appendix/tables/Table_S6.tex",
+    "caption": "Table S6. Checkpoint-probe gradient summaries over five batches within each seed. SD denotes within-seed batch variability.",
+    "in_main_manuscript": false
+  },
+  {
+    "label": "Table S7",
+    "pdf": "appendix/tables/Table_S7.pdf",
+    "png": "appendix/tables/Table_S7.png",
+    "tex": "appendix/tables/Table_S7.tex",
+    "caption": "Table S7. Step-12 representation summaries over five batches per seed. Feature dimension is 64; rank SD denotes within-seed batch variability.",
+    "in_main_manuscript": false
+  },
+  {
+    "label": "Table S8",
+    "pdf": "appendix/tables/Table_S8.pdf",
+    "png": "appendix/tables/Table_S8.png",
+    "tex": "appendix/tables/Table_S8.tex",
+    "caption": "Table S8. Step-12 relative view distance and descriptive association with forecasting error. Pearson limits denote the observed range across five batches.",
+    "in_main_manuscript": false
+  }
+]

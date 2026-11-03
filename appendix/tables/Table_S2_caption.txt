@@ -1,0 +1,1 @@
+Table S2. Core paired effects in normalized MAE, with metric-wise 95% t intervals. Mixed hardware estimates are exploratory; two-seed rows omit intervals.

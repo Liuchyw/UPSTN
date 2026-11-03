@@ -1,0 +1,1 @@
+Table S10. DIM checkpoint diagnostic over five fixed batches. Variance is across nodes; rank is the effective rank. Original and augmented views use the same checkpoint. Balanced accuracy uses a probability threshold of 0.5.

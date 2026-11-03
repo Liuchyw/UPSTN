@@ -1,0 +1,2 @@
+# Preserve deposited file bytes so published SHA256 values remain valid.
+* -text

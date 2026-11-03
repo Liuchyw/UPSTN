@@ -1,0 +1,6 @@
+metric,n,P_mean,Full_mean,paired_Full_minus_P_mean,paired_sample_sd,ci95_low,ci95_high,method
+normalized_mae,3,0.24301639677618186,0.24195761120489997,-0.0010587855712818988,0.001432578764978486,-0.004617508506551504,0.002499937363987707,"paired-mean t, df2; 3 training seeds; exploratory external joint gain, not factorial"
+normalized_rmse,3,0.626345598864264,0.6209066775538603,-0.0054389213104036145,0.002793934852119943,-0.012379440240989362,0.0015015976201821343,"paired-mean t, df2; 3 training seeds; exploratory external joint gain, not factorial"
+original_mae,3,4.200223305107076,4.129466549501521,-0.07075675560555557,0.07371239099518208,-0.25386848590685923,0.11235497469574808,"paired-mean t, df2; 3 training seeds; exploratory external joint gain, not factorial"
+original_rmse,3,10.059219662965662,9.797073146746081,-0.2621465162195804,0.20351287909102322,-0.7677005340154891,0.2434075015763283,"paired-mean t, df2; 3 training seeds; exploratory external joint gain, not factorial"
+original_mape_percent,3,10.91655814160521,10.733161760307423,-0.18339638129778515,0.1417638642315611,-0.5355573426121037,0.16876458001653347,"paired-mean t, df2; 3 training seeds; exploratory external joint gain, not factorial"

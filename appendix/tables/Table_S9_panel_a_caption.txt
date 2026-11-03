@@ -1,0 +1,1 @@
+Table S9. Benchmark training settings (panel a). LR is initial learning rate; decay lists milestones. Warm-up is specific to the UPSTCN activation schedule; a dash in that column means not applicable. A decay dash means no milestone schedule is recorded. NR denotes an unrecorded fixed seed. AGCRN settings are taken from the reference configuration files.

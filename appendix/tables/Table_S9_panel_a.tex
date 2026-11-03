@@ -1,0 +1,24 @@
+\begingroup\color{revisionblue}
+
+\begin{center}\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Data/model & Seed & Batch & LR & Warm-up & Decay \\
+\midrule
+JiNan / GWNet & NR & 64 & 0.001 & -- & -- \\
+JiNan / AGCRN & 42 & 16 & 0.003 & -- & 50/100 \\
+JiNan / TP & 42 & 16 & 0.001 & 20 & 50/100 \\
+JiNan / S+TP & 42 & 16 & 0.001 & 20 & 50/100 \\
+JiNan / ST-SSDL & 42 & 16 & 0.001 & -- & 50/100 \\
+METR-LA / GWNet & NR & 64 & 0.001 & -- & -- \\
+METR-LA / AGCRN & 42 & 64 & 0.003 & -- & 50/100 \\
+METR-LA / TP & 42 & 64 & 0.001 & 0 & 50/70 \\
+METR-LA / S+TP & 42 & 64 & 0.001 & 0 & 50/70 \\
+METR-LA / ST-SSDL & 42 & 64 & 0.001 & -- & 50/70 \\
+PEMS-BAY / GWNet & NR & 64 & 0.001 & -- & -- \\
+PEMS-BAY / AGCRN & 42 & 64 & 0.003 & -- & 50/100 \\
+PEMS-BAY / TP & 42 & 64 & 0.001 & 0 & 10/70/150 \\
+PEMS-BAY / ST-SSDL & 666 & 64 & 0.001 & -- & 10/70/150 \\
+\bottomrule
+\end{tabular}
+\end{center}

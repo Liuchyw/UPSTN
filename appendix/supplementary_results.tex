@@ -1,0 +1,449 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx,amsmath,booktabs,longtable,array,tabularx,hyperref}
+\hypersetup{hidelinks}
+\renewcommand{\thetable}{S\arabic{table}}
+\title{Supplementary Material for\\Auxiliary Supervision in Graph Traffic Forecasting: A Controlled Study of Utility and Loss Effects}
+\author{}\date{}\begin{document}\maketitle
+\section{Scope, data construction and metric definitions}
+This supplement reports run-level results and diagnostic summaries. Benchmark comparisons, controlled JiNan experiments and controlled METR-LA experiments use distinct data protocols. The independent training unit is a random seed. Five diagnostic batches are nested within each of three seeds. The weight-sensitivity comparisons use seed 42.
+
+JiNan controls use target-owned intervals $[0,6249)$, $[6249,7142)$ and $[7142,8928)$, with training-prefix scaler mean $48.8709058474$ and standard deviation $53.8879070877$. Their node-specific weekday--slot reference is fitted on the training prefix with the recorded slot smoothing. METR-LA controls use $[0,23990)$, $[23990,27417)$ and $[27417,34272)$; the scaler mean and standard deviation are $54.4059119157$ and $19.4942512012$. METR-LA references use node-specific positive-speed weekday--slot training means, with a node training-mean fallback for an unobserved slot. Target-crossing windows are excluded. This produces 23,967/3,416/6,844 METR-LA training/validation/test windows.
+
+All-entry normalized MAE/RMSE and original-scale metrics on targets $y>10^{-3}$ are distinct definitions. MAPE is $100\,\mathrm{mean}(|\hat y-y|/y)$ over valid original-scale entries. Public original-scale units are mph; JiNan original-scale values are flow. Different masks can change rankings even though scaling is affine. Validation selection uses the implemented normalized nonzero-label masked prediction loss, averaged over batches; test metrics never choose weights or checkpoints.
+
+Public-dataset benchmark reference channels use observations through 3 June 2012 (METR-LA) or 24 May 2017 (PEMS-BAY). Their sliding windows are partitioned 70/10/20, so the historical references include validation-period observations. At three sampled test windows per dataset, reference values match those computed using these cutoff dates. Array checksums and sampled-window hashes identify the benchmark data files. Controlled groups construct reference channels using training observations only.
+
+\section{Run-level controlled JiNan results}
+The inventory includes 30 completed core runs under two warm-up settings. The S+P seed-456 factorial cell uses RTX 4090; all other warm-up-zero core runs use RTX 3090. Warm-up-20 core runs use RTX 4090. Two additional seed-42 runs at $\delta=0.1$ reproduce the reported values to the displayed precision. Checkpoint hashes and metric-source records accompany the machine-readable inventory.
+
+\begingroup\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrrrrr}
+\caption{Controlled JiNan inventory. MAE/RMSE normalized; MAPE original-scale percent. GPU column gives hardware family.}\\
+\toprule
+Configuration & Seed & $e_{\mathrm{w}}$ & GPU & MAE & RMSE & MAPE \\
+\midrule\endfirsthead
+\toprule
+Configuration & Seed & $e_{\mathrm{w}}$ & GPU & MAE & RMSE & MAPE \\
+\midrule\endhead
+
+Prediction-only & 42 & 0 & 3090 & 0.154760 & 0.270620 & 33.821 \\
+
+P & 42 & 0 & 3090 & 0.157192 & 0.274520 & 34.605 \\
+
+S+P & 42 & 0 & 3090 & 0.157272 & 0.273686 & 34.534 \\
+
+TP+P & 42 & 0 & 3090 & 0.157036 & 0.274388 & 34.674 \\
+
+Full & 42 & 0 & 3090 & 0.156742 & 0.272582 & 34.421 \\
+
+P ($\delta=0$) & 42 & 0 & 3090 & 0.154494 & 0.270487 & 33.848 \\
+
+Full ($\delta=0$) & 42 & 0 & 3090 & 0.155743 & 0.270443 & 33.704 \\
+
+Prediction-only & 123 & 0 & 3090 & 0.154868 & 0.270561 & 33.630 \\
+
+P & 123 & 0 & 3090 & 0.156435 & 0.273361 & 34.401 \\
+
+S+P & 123 & 0 & 3090 & 0.157223 & 0.274585 & 34.038 \\
+
+TP+P & 123 & 0 & 3090 & 0.155905 & 0.272430 & 33.731 \\
+
+Full & 123 & 0 & 3090 & 0.156921 & 0.273842 & 33.840 \\
+
+P ($\delta=0$) & 123 & 0 & 3090 & 0.154743 & 0.270467 & 34.132 \\
+
+Full ($\delta=0$) & 123 & 0 & 3090 & 0.156140 & 0.272393 & 33.676 \\
+
+Prediction-only & 456 & 0 & 3090 & 0.154323 & 0.269607 & 33.893 \\
+
+P & 456 & 0 & 3090 & 0.157086 & 0.274614 & 34.284 \\
+
+S+P & 456 & 0 & 4090 & 0.157791 & 0.274325 & 34.333 \\
+
+TP+P & 456 & 0 & 3090 & 0.156066 & 0.273774 & 34.333 \\
+
+Full & 456 & 0 & 3090 & 0.156632 & 0.272981 & 34.326 \\
+
+P ($\delta=0$) & 456 & 0 & 3090 & 0.153989 & 0.268978 & 33.776 \\
+
+Full ($\delta=0$) & 456 & 0 & 3090 & 0.155885 & 0.271816 & 34.076 \\
+
+P & 42 & 20 & 4090 & 0.155562 & 0.271476 & 34.078 \\
+
+Full & 42 & 20 & 4090 & 0.157376 & 0.274520 & 34.390 \\
+
+Full ($\delta=0$) & 42 & 20 & 4090 & 0.155827 & 0.272645 & 34.135 \\
+
+P & 123 & 20 & 4090 & 0.157059 & 0.274986 & 34.534 \\
+
+Full & 123 & 20 & 4090 & 0.157472 & 0.274592 & 34.236 \\
+
+Full ($\delta=0$) & 123 & 20 & 4090 & 0.156129 & 0.272139 & 34.633 \\
+
+P & 456 & 20 & 4090 & 0.156812 & 0.274182 & 34.255 \\
+
+Full & 456 & 20 & 4090 & 0.156658 & 0.273477 & 34.038 \\
+
+Full ($\delta=0$) & 456 & 20 & 4090 & 0.154867 & 0.271250 & 33.820 \\
+
+\bottomrule
+\end{longtable}\endgroup
+
+\section{Paired effects and uncertainty}
+Paired differences are computed within seed before means and sample SDs. Metric-wise 95\% t intervals use two degrees of freedom for three training seeds. Same-GPU subsets with two seeds are summarized descriptively. The factorial interaction residual is $I=E_F-E_{SP}-E_{TP}+E_P$. Deviation penalties are $D_P=E(P,on)-E(P,off)$ and $D_F=E(F,on)-E(F,off)$, with difference-in-differences $J=D_F-D_P$. Full-minus-P measures the overall joint forecasting gain.
+
+\begingroup\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{p{42mm}rrrrrrl}
+\caption{Core paired effects in normalized MAE, with metric-wise 95\% t intervals. Mixed hardware estimates are exploratory; two-seed rows omit intervals.}\\
+\toprule
+Comparison & $e_{\mathrm{w}}$ & $n$ & Mean & SD & CI lower & CI upper & GPU \\
+\midrule\endfirsthead
+\toprule
+Comparison & $e_{\mathrm{w}}$ & $n$ & Mean & SD & CI lower & CI upper & GPU \\
+\midrule\endhead
+
+P minus Prediction-only & 0 & 3 & 0.002254 & 0.000617 & 0.000721 & 0.003788 & 3090 \\
+
+S+P minus Prediction-only & 0 & 3 & 0.002779 & 0.000603 & 0.001281 & 0.004276 & mixed \\
+
+S+P minus Prediction-only & 0 & 2 & 0.002434 & 0.000111 & -- & -- & 3090 (2) \\
+
+TP+P minus Prediction-only & 0 & 3 & 0.001686 & 0.000621 & 0.000142 & 0.003229 & 3090 \\
+
+Full minus Prediction-only & 0 & 3 & 0.002114 & 0.000172 & 0.001686 & 0.002543 & 3090 \\
+
+S+P minus P & 0 & 3 & 0.000525 & 0.000387 & -0.000436 & 0.001485 & mixed \\
+
+S+P minus P & 0 & 2 & 0.000434 & 0.000500 & -- & -- & 3090 (2) \\
+
+TP+P minus P & 0 & 3 & -0.000569 & 0.000434 & -0.001646 & 0.000509 & 3090 \\
+
+Full minus P & 0 & 3 & -0.000140 & 0.000541 & -0.001484 & 0.001205 & 3090 \\
+
+Full minus TP+P & 0 & 3 & 0.000429 & 0.000666 & -0.001225 & 0.002083 & 3090 \\
+
+Full minus S+P & 0 & 3 & -0.000664 & 0.000444 & -0.001767 & 0.000438 & mixed \\
+
+Full minus S+P & 0 & 2 & -0.000417 & 0.000162 & -- & -- & 3090 (2) \\
+
+Interaction $I$ & 0 & 3 & -0.000096 & 0.000304 & -0.000850 & 0.000659 & mixed \\
+
+Interaction $I$ & 0 & 2 & -0.000074 & 0.000426 & -- & -- & 3090 (2) \\
+
+Full minus P & 20 & 3 & 0.000691 & 0.001013 & -0.001825 & 0.003207 & 4090 \\
+
+Full ($\delta=0$) minus Full & 20 & 3 & -0.001561 & 0.000225 & -0.002119 & -0.001003 & 4090 \\
+
+$D_P$ & 0 & 3 & 0.002496 & 0.000724 & 0.000699 & 0.004293 & 3090 \\
+
+$D_F$ & 0 & 3 & 0.000842 & 0.000137 & 0.000502 & 0.001182 & 3090 \\
+
+Interaction $J$ & 0 & 3 & -0.001654 & 0.000720 & -0.003443 & 0.000136 & 3090 \\
+
+\bottomrule
+\end{longtable}\endgroup
+
+\section{Nonzero deviation-weight sensitivity}
+The candidate set is $\{0.03,0.1,0.3\}$ for P and Full at seed 42. All candidates share the validation criterion, 200-epoch maximum budget and patience 30. Delta 0.1 uses existing models; four additional runs evaluate the other candidates. Minimum validation prediction loss selects 0.03 for each topology. The table reports every candidate.
+
+\begingroup\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrrrr}
+\caption{JiNan weight sensitivity at seed 42. MAE/RMSE normalized; MAPE original-scale percent. Asterisk denotes validation-selected weight.}\\
+\toprule
+Model & $\delta$ & Val MAE & Test MAE & Test RMSE & MAPE \\
+\midrule\endfirsthead
+\toprule
+Model & $\delta$ & Val MAE & Test MAE & Test RMSE & MAPE \\
+\midrule\endhead
+
+Full$^*$ & 0.03 & 0.148694 & 0.155571 & 0.270356 & 34.244 \\
+
+P$^*$ & 0.03 & 0.149170 & 0.155202 & 0.271300 & 33.801 \\
+
+Full & 0.1 & 0.150042 & 0.156742 & 0.272582 & 34.421 \\
+
+P & 0.1 & 0.151883 & 0.157192 & 0.274520 & 34.605 \\
+
+Full & 0.3 & 0.151628 & 0.157305 & 0.273565 & 34.222 \\
+
+P & 0.3 & 0.151539 & 0.156794 & 0.274382 & 34.516 \\
+
+\bottomrule
+\end{longtable}\endgroup
+
+\section{Matched METR-LA results}
+The twelve controls share a training-prefix-only protocol, RTX 3090, seed-matched settings, a 200-epoch maximum budget and patience 30. Six original runs use $\delta=1$; six paired interventions set $\delta=0$ and retain every other scientific setting. For Full/seed456 at $\delta=1$, early stopping occurs at epoch 158 and validation selects epoch 128. At $\delta=0$, Prototype/seed42 and Joint/seed123 complete 200 epochs. The other four interventions stop after 30 epochs without validation improvement, at epochs 131, 92, 86 and 179. Physical metrics and all-entry normalized metrics are reported separately.
+
+\begingroup\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{rlrrrrrr}
+\caption{METR-LA test metrics from independently replayed validation-selected models. Physical MAE/RMSE in mph; MAPE in percent.}\\
+\toprule
+Seed & Model & $\delta$ & MAE & RMSE & MAPE & Norm MAE & Norm RMSE \\
+\midrule\endfirsthead
+\toprule
+Seed & Model & $\delta$ & MAE & RMSE & MAPE & Norm MAE & Norm RMSE \\
+\midrule\endhead
+
+42 & Prototype & 1 & 4.1054 & 9.8354 & 10.7304 & 0.241014 & 0.624565 \\
+
+42 & Prototype & 0 & 4.0152 & 9.7330 & 10.3167 & 0.233649 & 0.614204 \\
+
+42 & Joint & 1 & 4.1119 & 9.8064 & 10.6604 & 0.240926 & 0.621577 \\
+
+42 & Joint & 0 & 4.0657 & 9.7984 & 10.5082 & 0.236754 & 0.618522 \\
+
+123 & Prototype & 1 & 4.2407 & 10.1580 & 10.9975 & 0.244136 & 0.626997 \\
+
+123 & Prototype & 0 & 4.1116 & 9.9318 & 10.6970 & 0.236897 & 0.617219 \\
+
+123 & Joint & 1 & 4.1004 & 9.7538 & 10.6552 & 0.241432 & 0.622150 \\
+
+123 & Joint & 0 & 4.0784 & 9.8360 & 10.5525 & 0.237777 & 0.620716 \\
+
+456 & Prototype & 1 & 4.2546 & 10.1843 & 11.0218 & 0.243898 & 0.627474 \\
+
+456 & Prototype & 0 & 4.1401 & 9.9750 & 10.7060 & 0.238024 & 0.619045 \\
+
+456 & Joint & 1 & 4.1761 & 9.8311 & 10.8840 & 0.243515 & 0.618993 \\
+
+456 & Joint & 0 & 4.0589 & 9.6968 & 10.5641 & 0.237880 & 0.614173 \\
+
+\bottomrule
+\end{longtable}\endgroup
+
+\begingroup\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{llrrrr}
+\caption{METR-LA paired summaries ($n=3$). Joint-minus-Prototype uses $\delta=1$. Penalties are On minus Off; $J=D_F-D_P$. Intervals are metric-wise descriptive 95\% t intervals (df2), without multiplicity-adjusted significance claims.}\\
+\toprule
+Comparison & Metric & Mean & SD & CI lower & CI upper \\
+\midrule\endfirsthead
+\toprule
+Comparison & Metric & Mean & SD & CI lower & CI upper \\
+\midrule\endhead
+
+Joint minus Prototype & Normalized MAE & -0.001059 & 0.001433 & -0.004618 & 0.002500 \\
+
+Joint minus Prototype & Normalized RMSE & -0.005439 & 0.002794 & -0.012379 & 0.001502 \\
+
+Joint minus Prototype & Physical MAE (mph) & -0.070757 & 0.073712 & -0.253868 & 0.112355 \\
+
+Joint minus Prototype & Physical RMSE (mph) & -0.262147 & 0.203513 & -0.767701 & 0.243408 \\
+
+Joint minus Prototype & MAPE (percentage points) & -0.183396 & 0.141764 & -0.535557 & 0.168765 \\
+
+$D_P$ & MAE (mph) & 0.111259 & 0.019614 & 0.062534 & 0.159983 \\
+
+$D_P$ & RMSE (mph) & 0.179293 & 0.067179 & 0.012412 & 0.346175 \\
+
+$D_P$ & MAPE (pp) & 0.343354 & 0.061424 & 0.190768 & 0.495939 \\
+
+$D_P$ & Normalized MAE & 0.006826 & 0.000827 & 0.004772 & 0.008881 \\
+
+$D_P$ & Normalized RMSE & 0.009523 & 0.000991 & 0.007061 & 0.011985 \\
+
+$D_F$ & MAE (mph) & 0.061795 & 0.049503 & -0.061177 & 0.184768 \\
+
+$D_F$ & RMSE (mph) & 0.019997 & 0.108712 & -0.250059 & 0.290052 \\
+
+$D_F$ & MAPE (pp) & 0.191535 & 0.113860 & -0.091310 & 0.474380 \\
+
+$D_F$ & Normalized MAE & 0.004487 & 0.001027 & 0.001936 & 0.007039 \\
+
+$D_F$ & Normalized RMSE & 0.003103 & 0.001694 & -0.001104 & 0.007310 \\
+
+$J$ & MAE (mph) & -0.049463 & 0.055179 & -0.186537 & 0.087610 \\
+
+$J$ & RMSE (mph) & -0.159297 & 0.129466 & -0.480909 & 0.162315 \\
+
+$J$ & MAPE (pp) & -0.151819 & 0.138711 & -0.496396 & 0.192759 \\
+
+$J$ & Normalized MAE & -0.002339 & 0.001829 & -0.006883 & 0.002205 \\
+
+$J$ & Normalized RMSE & -0.006420 & 0.002489 & -0.012603 & -0.000237 \\
+
+\bottomrule
+\end{longtable}\endgroup
+
+\section{Gradient and representation probe variability}
+We probe three warm-up-zero Full checkpoints selected at epochs 190, 195 and 200 for seeds 42, 123 and 456. Each seed uses five fixed, disjoint training batches of 16 windows. The same windows and augmentation seeds are reused across seeds. Probes use training mode with curriculum sampling disabled and model parameters fixed. Parameter and buffer states are checked after each probe. Gradients cover all encoder parameters before clipping and Adam. Combined ratios use the gradient of the weighted summed auxiliary loss; the ramp is one at these checkpoints. The gradient equation in main-text Section 4.5 defines the encoder-gradient ratio and cosine. The ratio denominator is floored at $10^{-12}$ in code; cosines are undefined when either norm is at most $10^{-12}$. Near-zero gradient norms are reported as undefined cosines. SD denotes batch variability within each training seed.
+
+\begingroup\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{rlrrrr}
+\caption{Checkpoint-probe gradient summaries over five batches within each seed. SD denotes within-seed batch variability.}\\
+\toprule
+Seed & Loss & Cos mean & Cos SD & Ratio mean & Ratio SD \\
+\midrule\endfirsthead
+\toprule
+Seed & Loss & Cos mean & Cos SD & Ratio mean & Ratio SD \\
+\midrule\endhead
+
+42 & Combined & 0.0444 & 0.1029 & 3.3892 & 1.2038 \\
+
+42 & Spatial & -0.0031 & 0.1087 & 1.0404 & 0.4608 \\
+
+42 & Temporal & 0.0225 & 0.1258 & 0.0280 & 0.0082 \\
+
+42 & Contrastive & -0.1053 & 0.2373 & 0.0634 & 0.0211 \\
+
+42 & Deviation & 0.0466 & 0.0871 & 3.1757 & 1.2248 \\
+
+123 & Combined & -0.0106 & 0.0701 & 3.7244 & 1.8120 \\
+
+123 & Spatial & 0.0143 & 0.0820 & 3.2574 & 1.5825 \\
+
+123 & Temporal & 0.0488 & 0.1102 & 0.0464 & 0.0103 \\
+
+123 & Contrastive & -0.0009 & 0.0731 & 0.0590 & 0.0132 \\
+
+123 & Deviation & -0.0328 & 0.0248 & 2.1046 & 0.7836 \\
+
+456 & Combined & -0.0300 & 0.1126 & 5.9867 & 2.6478 \\
+
+456 & Spatial & 0.0475 & 0.1957 & 2.5580 & 1.5630 \\
+
+456 & Temporal & -0.1122 & 0.0906 & 0.1327 & 0.0640 \\
+
+456 & Contrastive & -0.0859 & 0.1227 & 0.0562 & 0.0285 \\
+
+456 & Deviation & -0.0451 & 0.0701 & 5.3945 & 2.3081 \\
+
+\bottomrule
+\end{longtable}\endgroup
+
+Effective rank is the exponential entropy of normalized singular values of the centered window--node by feature matrix. Constant matrices have effective rank zero. Node variance is computed across nodes within each window; sample variance is across windows for each node. Relative view distance divides each window--node difference norm by the original-state norm floored at $10^{-8}$. Pearson correlations summarize dependent window--node observations within each batch. All probes use the Full configuration with temporal prediction.
+
+\begingroup\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{rlrrrr}
+\caption{Step-12 representation summaries over five batches per seed. Feature dimension is 64; rank SD denotes within-seed batch variability.}\\
+\toprule
+Seed & View & Rank mean & Rank SD & Node variance & Sample variance \\
+\midrule\endfirsthead
+\toprule
+Seed & View & Rank mean & Rank SD & Node variance & Sample variance \\
+\midrule\endhead
+
+42 & Original & 31.179 & 0.436 & 0.32079 & 0.24181 \\
+
+42 & Historical & 28.978 & 0.518 & 0.26733 & 0.18024 \\
+
+42 & Spatial & 33.637 & 0.406 & 0.31488 & 0.22987 \\
+
+123 & Original & 31.567 & 0.206 & 0.30034 & 0.17178 \\
+
+123 & Historical & 29.568 & 0.229 & 0.24988 & 0.11799 \\
+
+123 & Spatial & 33.530 & 0.160 & 0.29950 & 0.16848 \\
+
+456 & Original & 31.785 & 0.248 & 0.29742 & 0.22220 \\
+
+456 & Historical & 29.716 & 0.363 & 0.24366 & 0.16437 \\
+
+456 & Spatial & 33.818 & 0.295 & 0.29361 & 0.21554 \\
+
+\bottomrule
+\end{longtable}\endgroup
+
+\begingroup\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{rlrrr}
+\caption{Step-12 relative view distance and descriptive association with forecasting error. Pearson limits denote the observed range across five batches.}\\
+\toprule
+Seed & View & Mean distance & Pearson min & Pearson max \\
+\midrule\endfirsthead
+\toprule
+Seed & View & Mean distance & Pearson min & Pearson max \\
+\midrule\endhead
+
+42 & Spatial & 0.1306 & -0.0454 & 0.0143 \\
+
+42 & Historical & 0.4615 & 0.0315 & 0.1804 \\
+
+123 & Spatial & 0.0858 & -0.0595 & 0.0405 \\
+
+123 & Historical & 0.4034 & 0.1705 & 0.2355 \\
+
+456 & Spatial & 0.0976 & -0.0461 & 0.0381 \\
+
+456 & Historical & 0.4408 & 0.1488 & 0.2927 \\
+
+\bottomrule
+\end{longtable}\endgroup
+
+\section{Objective implementation and historical settings}
+The published ST-SSDL triplet uses squared distances with a detached query; its released code uses unsquared distances with a detached query. Its deviation objective matches detached-query distances to prototype distances. UPSTCN instead uses an unsquared triplet with query gradients and aligns historical queries and prototypes against stop-gradient current targets. The intervention toggles this historical-alignment term. These distinctions complement the cited objective definitions in the main text. The checkpoint-matched historical ST-SSDL baseline scripts retain the detached-query unsquared triplet and distance-of-distances deviation objective. The benchmark adaptation changes data preprocessing and loading, while the historical-alignment objective belongs to UPSTCN.
+
+The JiNan benchmark prototype-based models use a network-aggregated historical reference broadcast to sensors. HA and the controlled groups use sensor-specific historical references computed from training observations. These protocol groups are analyzed separately.
+
+The warm-up-zero controls, weight-sensitivity runs and matched METR-LA comparisons use RTX 3090, except for the S+P seed-456 factorial run on RTX 4090. Warm-up-20 controls and trajectory diagnostics use RTX 4090. Multi-seed checkpoint probes use RTX 3090. Configuration files in the source-data index specify learning-rate schedules and all objective weights. METR-LA controls use warm-up zero, deviation weight one and learning-rate multipliers of 0.1 at epochs 50 and 70.
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.06}
+\setlength{\tabcolsep}{2pt}
+\caption{Benchmark training settings (panel a). LR is initial learning rate; decay lists milestones. Warm-up is specific to the UPSTCN activation schedule; a dash in that column means not applicable. A decay dash means no milestone schedule is recorded. NR denotes an unrecorded fixed seed. AGCRN settings are taken from the reference configuration files.}\label{tab:protocol}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrr@{}}
+\toprule
+Data/model & Seed & Batch & LR & Warm-up & Decay \\
+\midrule
+JiNan / GWNet & NR & 64 & 0.001 & -- & -- \\
+JiNan / AGCRN & 42 & 16 & 0.003 & -- & 50/100 \\
+JiNan / TP & 42 & 16 & 0.001 & 20 & 50/100 \\
+JiNan / S+TP & 42 & 16 & 0.001 & 20 & 50/100 \\
+JiNan / ST-SSDL & 42 & 16 & 0.001 & -- & 50/100 \\
+METR-LA / GWNet & NR & 64 & 0.001 & -- & -- \\
+METR-LA / AGCRN & 42 & 64 & 0.003 & -- & 50/100 \\
+METR-LA / TP & 42 & 64 & 0.001 & 0 & 50/70 \\
+METR-LA / S+TP & 42 & 64 & 0.001 & 0 & 50/70 \\
+METR-LA / ST-SSDL & 42 & 64 & 0.001 & -- & 50/70 \\
+PEMS-BAY / GWNet & NR & 64 & 0.001 & -- & -- \\
+PEMS-BAY / AGCRN & 42 & 64 & 0.003 & -- & 50/100 \\
+PEMS-BAY / TP & 42 & 64 & 0.001 & 0 & 10/70/150 \\
+PEMS-BAY / ST-SSDL & 666 & 64 & 0.001 & -- & 10/70/150 \\
+\bottomrule
+\end{tabular*}
+JiNan benchmark UPSTCN and AGCRN entries and all Graph WaveNet entries use 150-epoch budgets; ST-SSDL and the other public-dataset entries use 200.
+
+\noindent Panel (b): joint-model benchmark results. JiNan MAE/RMSE are normalized; METR-LA MAE/RMSE are in mph. MAPE is in percent.
+\begin{center}\footnotesize
+\begin{tabular}{lrrr}\toprule
+Dataset & MAE & RMSE & MAPE \\ \midrule
+JiNan & 0.1610 & 0.2793 & 35.03 \\
+METR-LA & 3.1030 & 6.3941 & 8.77 \\
+\bottomrule\end{tabular}\end{center}
+\end{table}
+
+\section{Offline DIM diagnostic}
+We evaluate one DIM checkpoint selected by validation loss (training seed 42, epoch 149). Its validation and test metrics match the reported values to their stated precision. Five fixed training batches contain 16 windows each. Forward probes retain the original batch-permutation negative sampler, including permutation fixed points, and the sigmoid-of-node-mean readout. Model parameters and buffers remain unchanged throughout these probes.
+
+The discriminator has BCE near $\ln 2$, AUROC near 0.5 and balanced accuracy near 0.5 across the five batches. Positive and negative predicted probabilities both concentrate near 0.5. Nonzero node variances and effective ranks characterize the corresponding encoder states. The five batches describe within-checkpoint variation from a single training seed. Training of this DIM checkpoint excluded batches with nonfinite losses. Raw logits, checkpoint identity and source hashes accompany the diagnostic records.
+
+\begingroup\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{rrrrrrrr}
+\caption{DIM checkpoint diagnostic over five fixed batches. Variance is across nodes; rank is the effective rank. Original and augmented views use the same checkpoint. Balanced accuracy uses a probability threshold of 0.5.}\\
+\toprule
+Batch & BCE & AUROC & Bal. acc. & Orig. var. & Aug. var. & Orig. rank & Aug. rank \\
+\midrule\endfirsthead
+\toprule
+Batch & BCE & AUROC & Bal. acc. & Orig. var. & Aug. var. & Orig. rank & Aug. rank \\
+\midrule\endhead
+
+1 & 0.693147 & 0.5000 & 0.4986 & 0.5123 & 0.5026 & 26.63 & 30.25 \\
+
+2 & 0.693147 & 0.5001 & 0.5005 & 0.5430 & 0.5322 & 28.40 & 31.01 \\
+
+3 & 0.693147 & 0.4998 & 0.5009 & 0.5152 & 0.5074 & 27.83 & 30.75 \\
+
+4 & 0.693147 & 0.5004 & 0.5007 & 0.4947 & 0.4897 & 27.38 & 30.48 \\
+
+5 & 0.693147 & 0.5001 & 0.4984 & 0.5470 & 0.5319 & 28.27 & 31.55 \\
+
+\bottomrule
+\end{longtable}\endgroup
+
+\section{Source data and reproducibility}
+The source-data tables contain metrics, paired differences, sample SDs, selection records and checkpoint identities. Core results appear in \texttt{verified\_result\_inventory.csv}. Independent replays and sensitivity results appear in \texttt{all\_recomputed\_metrics.csv} and \texttt{jinan\_weight\_sensitivity.csv}. Probe records identify seed, batch, recurrent step and view. The source-data index links analysis scripts and manifests. Access follows the manuscript's data-availability statement.
+
+Source hashes identify the trainer version used for each run. An epoch-checkpoint update adds model, optimizer, scheduler and random-state persistence while retaining the same loss definitions and forward computation. The first P/delta-0.03 sensitivity run predates this update; later sensitivity runs use the revised checkpoint handling. Source hashes and consistency tests accompany the code records.
+\end{document}
