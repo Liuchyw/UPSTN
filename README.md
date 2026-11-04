@@ -32,7 +32,7 @@ Training seeds, not diagnostic batches, are the independent units in paired trai
 
 ## Access and scope
 
-This repository is currently private. Uploading these files does not itself provide reviewer access, and this account-based URL is not anonymous. The supplementary PDF should also be submitted through the journal system unless a working review-access route is arranged.
+The source repository is private. For peer review, use the author-provided [anonymous repository](https://anonymous.4open.science/r/UPSTN-5C86/). Supplementary results are under `appendix/`, and numerical evidence is under `source_data/`.
 
 Raw third-party traffic datasets, trained checkpoints, private server addresses, credentials, training caches and unrelated project files are not included. Absolute local/server path columns have been removed from CSV copies without changing their numeric fields. No new redistribution licence is assigned by this deposit.
 
