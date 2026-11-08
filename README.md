@@ -22,7 +22,7 @@ This repository contains the supplementary tables reproduced in the response let
 | Table S9 (panel b) | Joint-model benchmark results | [PDF](appendix/tables/Table_S9_panel_b.pdf) / [PNG](appendix/tables/Table_S9_panel_b.png) / [TeX](appendix/tables/Table_S9_panel_b.tex) |
 | Table S10 | DIM checkpoint discrimination and representation diagnostics | [PDF](appendix/tables/Table_S10.pdf) / [PNG](appendix/tables/Table_S10.png) / [TeX](appendix/tables/Table_S10.tex) |
 
-The full appendix also retains Tables S1 and S3 as run-inventory and weight-sensitivity context. These two tables are not separate image occurrences in the response letter. Figures 1-4 and Tables 1-6 are already in the main manuscript and are not duplicated here. The audit found no additional response-only experimental figures.
+The full appendix also retains Tables S1 and S3 as run-inventory and weight-sensitivity context. These two tables are not separate image occurrences in the response letter. Figures 1-4 and Tables 1-6 appear in the main manuscript. Portable Figure 1/4 scripts and exported plotting inputs are provided in [reproduction](reproduction/README.md). The audit found no additional response-only experimental figures.
 
 ## Source data and interpretation
 
@@ -39,3 +39,7 @@ Raw third-party traffic datasets, trained checkpoints, private server addresses,
 ## Integrity
 
 `SHA256SUMS.txt` records the uploaded file hashes. This package was assembled on 4 November 2026 from the revised supplementary material and the current response-letter figures/tables. It records existing results and introduces no new experiments.
+
+## Numerical figure reproduction update
+
+The [reproduction package](reproduction/README.md) adds the latest Figure 1 and Figure 4 plotting scripts and exported measurements (9 November 2026). It introduces no new training results.

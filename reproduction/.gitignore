@@ -1,0 +1,4 @@
+__pycache__/
+**/output/*
+!figure1/output/Figure1_motivation_diagram.pdf
+!figure4/output/Figure4_node_effects_main.pdf
