@@ -12,6 +12,7 @@ This repository contains the supplementary tables reproduced in the response let
 
 | Table | Contents | Files |
 | --- | --- | --- |
+| Table S1 (excerpt) | JiNan delayed-activation Prototype/Joint comparison | [PDF](appendix/tables/Table_S1_delayed_activation.pdf) / [PNG](appendix/tables/Table_S1_delayed_activation.png) / [TeX](appendix/tables/Table_S1_delayed_activation.tex) |
 | Table S2 | JiNan paired effects and seed-level uncertainty | [PDF](appendix/tables/Table_S2.pdf) / [PNG](appendix/tables/Table_S2.png) / [TeX](appendix/tables/Table_S2.tex) |
 | Table S4 | METR-LA metrics for matched alignment-on/off models | [PDF](appendix/tables/Table_S4.pdf) / [PNG](appendix/tables/Table_S4.png) / [TeX](appendix/tables/Table_S4.tex) |
 | Table S5 | METR-LA paired effect summaries | [PDF](appendix/tables/Table_S5.pdf) / [PNG](appendix/tables/Table_S5.png) / [TeX](appendix/tables/Table_S5.tex) |
@@ -22,7 +23,7 @@ This repository contains the supplementary tables reproduced in the response let
 | Table S9 (panel b) | Joint-model benchmark results | [PDF](appendix/tables/Table_S9_panel_b.pdf) / [PNG](appendix/tables/Table_S9_panel_b.png) / [TeX](appendix/tables/Table_S9_panel_b.tex) |
 | Table S10 | DIM checkpoint discrimination and representation diagnostics | [PDF](appendix/tables/Table_S10.pdf) / [PNG](appendix/tables/Table_S10.png) / [TeX](appendix/tables/Table_S10.tex) |
 
-The full appendix also retains Tables S1 and S3 as run-inventory and weight-sensitivity context. These two tables are not separate image occurrences in the response letter. Figures 1-4 and Tables 1-6 appear in the main manuscript. The audit found no additional response-only experimental figures.
+The full appendix retains Table S1 as the complete run inventory and Table S3 as weight-sensitivity context. The Table S1 excerpt above reproduces the delayed-activation JiNan comparison retained in the response letter; main Table 5 reports the two-dataset warm-up-zero comparisons. The excerpt preserves the existing results and their configuration distinction. Figures 1-4 and Tables 1-6 appear in the main manuscript and are not separately deposited here. There are no additional response-only experimental figures.
 
 ## Source data and interpretation
 
@@ -38,4 +39,4 @@ Raw third-party traffic datasets, trained checkpoints, private server addresses,
 
 ## Integrity
 
-`SHA256SUMS.txt` records the uploaded file hashes. This package was assembled on 4 November 2026 from the revised supplementary material and the current response-letter figures/tables. It records existing results and introduces no new experiments.
+`SHA256SUMS.txt` records the uploaded file hashes. This package was assembled on 4 November 2026 from the revised supplementary material and response-letter tables. On 9 November 2026, the Table S1 delayed-activation excerpt was added to match the revised response letter. Existing numerical source files and the complete supplementary results are unchanged. This update introduces no new experiments.
