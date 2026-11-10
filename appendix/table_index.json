@@ -17,7 +17,8 @@
     "source_physical_size_pt": [
       301.74798583984375,
       89.37603759765625
-    ]
+    ],
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
   },
   {
     "label": "Table S10",
@@ -37,7 +38,8 @@
     "source_physical_size_pt": [
       298.20000000000005,
       71.80000000000007
-    ]
+    ],
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
   },
   {
     "label": "Table S9 (panel a)",
@@ -57,7 +59,8 @@
     "source_physical_size_pt": [
       317.822998046875,
       210.583984375
-    ]
+    ],
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
   },
   {
     "label": "Table S9 (panel b)",
@@ -77,7 +80,8 @@
     "source_physical_size_pt": [
       122.1,
       45.099999999999966
-    ]
+    ],
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
   },
   {
     "label": "Table S2",
@@ -97,7 +101,8 @@
     "source_physical_size_pt": [
       354.5,
       204.29999999999995
-    ]
+    ],
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
   },
   {
     "label": "Table S4",
@@ -117,7 +122,8 @@
     "source_physical_size_pt": [
       274.1,
       137.99999999999997
-    ]
+    ],
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
   },
   {
     "label": "Table S5",
@@ -137,7 +143,8 @@
     "source_physical_size_pt": [
       335.4,
       213.79999999999995
-    ]
+    ],
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
   },
   {
     "label": "Table S6",
@@ -157,7 +164,8 @@
     "source_physical_size_pt": [
       226.7,
       166.5
-    ]
+    ],
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
   },
   {
     "label": "Table S7",
@@ -177,7 +185,8 @@
     "source_physical_size_pt": [
       263.3,
       109.69999999999999
-    ]
+    ],
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
   },
   {
     "label": "Table S8",
@@ -197,6 +206,7 @@
     "source_physical_size_pt": [
       218.3,
       81.30000000000007
-    ]
+    ],
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
   }
 ]
