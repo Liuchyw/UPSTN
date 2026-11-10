@@ -27,7 +27,7 @@ The full appendix retains Table S1 as the complete run inventory and Table S3 as
 
 ## Source data and interpretation
 
-Numeric CSV files are in [source_data](source_data/README.md). Table PNG files are byte-identical to those embedded in the current response Word document. Individual table PDFs retain the corresponding vector artwork and complete outer rules. The table-only TeX fragments use the packages and `revisionblue` definition listed in the source-data README.
+Numeric CSV files are in [source_data](source_data/README.md). Table PNG files are byte-identical to those embedded in the current response Word document. Individual table PDFs retain vector artwork and complete outer rules. Their images are direct crops of the current supplementary PDF, with the existing standalone PDFs retained as the source for the delayed-activation excerpt and training-settings table. Table images keep their source fonts and layout; the response letter scales an image down only if it exceeds the available page width. The table-only TeX fragments retain the same table contents and use the packages and `revisionblue` definition listed in the source-data README.
 
 Training seeds, not diagnostic batches, are the independent units in paired training comparisons. Five probe batches are nested within each seed. JiNan all-entry normalized metrics and original-scale validity-masked metrics are distinct. Public physical speed errors are in mph, and MAPE is in percent. The paired uncertainty intervals and mixed-hardware qualifications are retained as reported; they are not a claim of multiplicity-adjusted significance. Consult the complete appendix for exact definitions and protocols.
 
@@ -39,4 +39,4 @@ Raw third-party traffic datasets, trained checkpoints, private server addresses,
 
 ## Integrity
 
-`SHA256SUMS.txt` records the uploaded file hashes. This package was assembled on 4 November 2026 from the revised supplementary material and response-letter tables. On 9 November 2026, the Table S1 delayed-activation excerpt was added to match the revised response letter. Existing numerical source files and the complete supplementary results are unchanged. This update introduces no new experiments.
+`SHA256SUMS.txt` records the uploaded file hashes. This package was assembled on 4 November 2026 from the revised supplementary material and response-letter tables. On 9 November 2026, the Table S1 delayed-activation excerpt was added to match the revised response letter. Existing numerical source files and the complete supplementary results are unchanged. This update introduces no new experiments. On 10 November 2026, the response-only table PDF/PNG files were synchronized with direct source-PDF captures in the response letter. Numerical source data and the complete supplementary PDF were not changed.
