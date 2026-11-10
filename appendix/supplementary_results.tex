@@ -1,7 +1,12 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[margin=22mm]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{mathptmx,amsmath,booktabs,longtable,array,tabularx,hyperref}
+\usepackage{mathptmx,amsmath,booktabs,longtable,array,tabularx,hyperref,etoolbox}
+\usepackage[notext]{stix}
+% Match the manuscript CAS tables: CM Sans 9 TeX pt, STIX mathematics.
+\newcommand{\ManuscriptTableFont}{\sffamily\fontsize{9}{11}\selectfont\renewcommand{\arraystretch}{1.08}\setlength{\tabcolsep}{3pt}}
+\AtBeginEnvironment{longtable}{\ManuscriptTableFont}
+\AtBeginEnvironment{tabular}{\ManuscriptTableFont}
 \hypersetup{hidelinks}
 \renewcommand{\thetable}{S\arabic{table}}
 \title{Supplementary Material for\\Auxiliary Supervision in Graph Traffic Forecasting: A Controlled Study of Utility and Loss Effects}

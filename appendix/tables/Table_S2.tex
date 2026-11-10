@@ -1,13 +1,10 @@
 \begingroup\color{revisionblue}
-
-\begin{longtable}{p{42mm}rrrrrrl}
+\sffamily\fontsize{9}{11}\selectfont\renewcommand{\arraystretch}{1.08}\setlength{\tabcolsep}{3pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{42mm}rrrrrrl}
 
 \toprule
 Comparison & $e_{\mathrm{w}}$ & $n$ & Mean & SD & CI lower & CI upper & GPU \\
-\midrule\endfirsthead
-\toprule
-Comparison & $e_{\mathrm{w}}$ & $n$ & Mean & SD & CI lower & CI upper & GPU \\
-\midrule\endhead
+\midrule
 
 P minus Prediction-only & 0 & 3 & 0.002254 & 0.000617 & 0.000721 & 0.003788 & 3090 \\
 
@@ -48,4 +45,5 @@ $D_F$ & 0 & 3 & 0.000842 & 0.000137 & 0.000502 & 0.001182 & 3090 \\
 Interaction $J$ & 0 & 3 & -0.001654 & 0.000720 & -0.003443 & 0.000136 & 3090 \\
 
 \bottomrule
-\end{longtable}
+\end{tabular}
+\endgroup

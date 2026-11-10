@@ -6,25 +6,27 @@
     "tex": "appendix/tables/Table_S1_delayed_activation.tex",
     "caption": "Table S1 (excerpt). JiNan Prototype/Joint results at $e_{\\mathrm{w}}=20$, excerpted from Supplementary Table S1. MAE/RMSE are normalized. $\\Delta$ is Joint minus Prototype, computed before rounding; $\\Delta$MAPE is in percentage points. These runs use RTX 4090; the $e_{\\mathrm{w}}=0$ Prototype/Joint pairs in main Table 5 use RTX 3090. The two groups therefore represent combined training-configuration changes.",
     "in_main_manuscript": false,
-    "capture_source": "appendix/tables/Table_S1_delayed_activation.pdf",
+    "capture_source": "appendix/tables/Table_S1_delayed_activation.tex",
     "capture_page": 1,
     "source_crop_pt": [
-      0.0,
-      0.0,
-      301.74798583984375,
-      89.37603759765625
+      0,
+      0,
+      267.9029846191406,
+      79.8740234375
     ],
     "source_physical_size_pt": [
-      301.74798583984375,
-      89.37603759765625
+      267.9029846191406,
+      79.8740234375
     ],
     "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
-    "display_body_font_pt": 10,
+    "display_body_font_pt": 8.9664,
     "display_physical_size_pt": [
-      336.53192138671875,
-      99.67884063720703
+      267.9029846191406,
+      79.8740234375
     ],
-    "proportional_scale_from_prior_pdf": 1.1152747854913534
+    "nominal_tex_font_pt": 9,
+    "display_typeface": "CM Sans (SFSS0900); STIX mathematics",
+    "generation_method": "Recompiled preserved TeX cells with main-manuscript CAS table typography; natural-size crop"
   },
   {
     "label": "Table S10",
@@ -33,25 +35,27 @@
     "tex": "appendix/tables/Table_S10.tex",
     "caption": "Table S10. DIM checkpoint diagnostic over five fixed batches. Variance is across nodes; rank is the effective rank. Original and augmented views use the same checkpoint. Balanced accuracy uses a probability threshold of 0.5.",
     "in_main_manuscript": false,
-    "capture_source": "appendix/supplementary_results.pdf",
-    "capture_page": 5,
+    "capture_source": "appendix/tables/Table_S10.tex",
+    "capture_page": 1,
     "source_crop_pt": [
-      148.6,
-      606.3,
-      446.8,
-      678.1
+      0,
+      0,
+      329.5749816894531,
+      86.90899658203125
     ],
     "source_physical_size_pt": [
-      298.20000000000005,
-      71.80000000000007
+      329.5749816894531,
+      86.90899658203125
     ],
     "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
-    "display_body_font_pt": 10,
+    "display_body_font_pt": 8.9664,
     "display_physical_size_pt": [
-      374.1484069824219,
-      90.08670043945312
+      329.5749816894531,
+      86.90899658203125
     ],
-    "proportional_scale_from_prior_pdf": 1.2546894132888482
+    "nominal_tex_font_pt": 9,
+    "display_typeface": "CM Sans (SFSS0900); STIX mathematics",
+    "generation_method": "Recompiled preserved TeX cells with main-manuscript CAS table typography; natural-size crop"
   },
   {
     "label": "Table S9 (panel a)",
@@ -60,25 +64,27 @@
     "tex": "appendix/tables/Table_S9_panel_a.tex",
     "caption": "Table S9. Benchmark training settings (panel a). LR is initial learning rate; decay lists milestones. Warm-up is specific to the UPSTCN activation schedule; a dash in that column means not applicable. A decay dash means no milestone schedule is recorded. NR denotes an unrecorded fixed seed. AGCRN settings are taken from the reference configuration files.",
     "in_main_manuscript": false,
-    "capture_source": "appendix/tables/Table_S9_panel_a.pdf",
+    "capture_source": "appendix/tables/Table_S9_panel_a.tex",
     "capture_page": 1,
     "source_crop_pt": [
-      0.0,
-      0.0,
-      317.822998046875,
-      210.583984375
+      0,
+      0,
+      266.94598388671875,
+      193.42901611328125
     ],
     "source_physical_size_pt": [
-      317.822998046875,
-      210.583984375
+      266.94598388671875,
+      193.42901611328125
     ],
     "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
-    "display_body_font_pt": 10,
+    "display_body_font_pt": 8.9664,
     "display_physical_size_pt": [
-      319.01611328125,
-      211.37452697753906
+      266.94598388671875,
+      193.42901611328125
     ],
-    "proportional_scale_from_prior_pdf": 1.0037540648614571
+    "nominal_tex_font_pt": 9,
+    "display_typeface": "CM Sans (SFSS0900); STIX mathematics",
+    "generation_method": "Recompiled preserved TeX cells with main-manuscript CAS table typography; natural-size crop"
   },
   {
     "label": "Table S9 (panel b)",
@@ -87,25 +93,27 @@
     "tex": "appendix/tables/Table_S9_panel_b.tex",
     "caption": "Panel (b): joint-model benchmark results. JiNan MAE/RMSE are normalized; METR-LA MAE/RMSE are in mph. MAPE is in percent.",
     "in_main_manuscript": false,
-    "capture_source": "appendix/supplementary_results.pdf",
-    "capture_page": 5,
+    "capture_source": "appendix/tables/Table_S9_panel_b.tex",
+    "capture_page": 1,
     "source_crop_pt": [
-      236.6,
-      347.3,
-      358.7,
-      392.4
+      0,
+      0,
+      146.41900634765625,
+      51.401981353759766
     ],
     "source_physical_size_pt": [
-      122.1,
-      45.099999999999966
+      146.41900634765625,
+      51.401981353759766
     ],
     "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
-    "display_body_font_pt": 10,
+    "display_body_font_pt": 8.9664,
     "display_physical_size_pt": [
-      153.19757080078125,
-      56.586490631103516
+      146.41900634765625,
+      51.401981353759766
     ],
-    "proportional_scale_from_prior_pdf": 1.2546894132888482
+    "nominal_tex_font_pt": 9,
+    "display_typeface": "CM Sans (SFSS0900); STIX mathematics",
+    "generation_method": "Recompiled preserved TeX cells with main-manuscript CAS table typography; natural-size crop"
   },
   {
     "label": "Table S2",
@@ -114,25 +122,27 @@
     "tex": "appendix/tables/Table_S2.tex",
     "caption": "Table S2. Core paired effects in normalized MAE, with metric-wise 95% t intervals. Mixed hardware estimates are exploratory; two-seed rows omit intervals.",
     "in_main_manuscript": false,
-    "capture_source": "appendix/supplementary_results.pdf",
-    "capture_page": 2,
+    "capture_source": "appendix/tables/Table_S2.tex",
+    "capture_page": 1,
     "source_crop_pt": [
-      120.4,
-      368.1,
-      474.9,
-      572.4
+      0,
+      0,
+      367.9939880371094,
+      252.60699462890625
     ],
     "source_physical_size_pt": [
-      354.5,
-      204.29999999999995
+      367.9939880371094,
+      252.60699462890625
     ],
     "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
-    "display_body_font_pt": 10,
+    "display_body_font_pt": 8.9664,
     "display_physical_size_pt": [
-      444.7873840332031,
-      256.3330383300781
+      367.9939880371094,
+      252.60699462890625
     ],
-    "proportional_scale_from_prior_pdf": 1.2546894132888482
+    "nominal_tex_font_pt": 9,
+    "display_typeface": "CM Sans (SFSS0900); STIX mathematics",
+    "generation_method": "Recompiled preserved TeX cells with main-manuscript CAS table typography; natural-size crop"
   },
   {
     "label": "Table S4",
@@ -141,25 +151,27 @@
     "tex": "appendix/tables/Table_S4.tex",
     "caption": "Table S4. METR-LA test metrics from independently replayed validation-selected models. Physical MAE/RMSE in mph; MAPE in percent.",
     "in_main_manuscript": false,
-    "capture_source": "appendix/supplementary_results.pdf",
-    "capture_page": 3,
+    "capture_source": "appendix/tables/Table_S4.tex",
+    "capture_page": 1,
     "source_crop_pt": [
-      160.6,
-      193.9,
-      434.7,
-      331.9
+      0,
+      0,
+      293.3030090332031,
+      169.75799560546875
     ],
     "source_physical_size_pt": [
-      274.1,
-      137.99999999999997
+      293.3030090332031,
+      169.75799560546875
     ],
     "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
-    "display_body_font_pt": 10,
+    "display_body_font_pt": 8.9664,
     "display_physical_size_pt": [
-      343.9103698730469,
-      173.1471405029297
+      293.3030090332031,
+      169.75799560546875
     ],
-    "proportional_scale_from_prior_pdf": 1.2546894132888482
+    "nominal_tex_font_pt": 9,
+    "display_typeface": "CM Sans (SFSS0900); STIX mathematics",
+    "generation_method": "Recompiled preserved TeX cells with main-manuscript CAS table typography; natural-size crop"
   },
   {
     "label": "Table S5",
@@ -168,25 +180,27 @@
     "tex": "appendix/tables/Table_S5.tex",
     "caption": "Table S5. METR-LA paired summaries (n=3). Joint-minus-Prototype uses δ=1. Penalties are On minus Off; J=DF−DP. Intervals are metric-wise descriptive 95% t intervals (df2), without multiplicity-adjusted significance claims.",
     "in_main_manuscript": false,
-    "capture_source": "appendix/supplementary_results.pdf",
-    "capture_page": 3,
+    "capture_source": "appendix/tables/Table_S5.tex",
+    "capture_page": 1,
     "source_crop_pt": [
-      130.0,
-      388.6,
-      465.4,
-      602.4
+      0,
+      0,
+      379.8999938964844,
+      264.4429931640625
     ],
     "source_physical_size_pt": [
-      335.4,
-      213.79999999999995
+      379.8999938964844,
+      264.4429931640625
     ],
     "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
-    "display_body_font_pt": 10,
+    "display_body_font_pt": 8.9664,
     "display_physical_size_pt": [
-      420.82281494140625,
-      268.2525939941406
+      379.8999938964844,
+      264.4429931640625
     ],
-    "proportional_scale_from_prior_pdf": 1.2546894132888482
+    "nominal_tex_font_pt": 9,
+    "display_typeface": "CM Sans (SFSS0900); STIX mathematics",
+    "generation_method": "Recompiled preserved TeX cells with main-manuscript CAS table typography; natural-size crop"
   },
   {
     "label": "Table S6",
@@ -195,25 +209,27 @@
     "tex": "appendix/tables/Table_S6.tex",
     "caption": "Table S6. Checkpoint-probe gradient summaries over five batches within each seed. SD denotes within-seed batch variability.",
     "in_main_manuscript": false,
-    "capture_source": "appendix/supplementary_results.pdf",
-    "capture_page": 4,
+    "capture_source": "appendix/tables/Table_S6.tex",
+    "capture_page": 1,
     "source_crop_pt": [
-      184.3,
-      87.7,
-      411.0,
-      254.2
+      0,
+      0,
+      249.2249755859375,
+      205.2650146484375
     ],
     "source_physical_size_pt": [
-      226.7,
-      166.5
+      249.2249755859375,
+      205.2650146484375
     ],
     "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
-    "display_body_font_pt": 10,
+    "display_body_font_pt": 8.9664,
     "display_physical_size_pt": [
-      284.4380798339844,
-      208.90579223632812
+      249.2249755859375,
+      205.2650146484375
     ],
-    "proportional_scale_from_prior_pdf": 1.2546894132888482
+    "nominal_tex_font_pt": 9,
+    "display_typeface": "CM Sans (SFSS0900); STIX mathematics",
+    "generation_method": "Recompiled preserved TeX cells with main-manuscript CAS table typography; natural-size crop"
   },
   {
     "label": "Table S7",
@@ -222,25 +238,27 @@
     "tex": "appendix/tables/Table_S7.tex",
     "caption": "Table S7. Step-12 representation summaries over five batches per seed. Feature dimension is 64; rank SD denotes within-seed batch variability.",
     "in_main_manuscript": false,
-    "capture_source": "appendix/supplementary_results.pdf",
-    "capture_page": 4,
+    "capture_source": "appendix/tables/Table_S7.tex",
+    "capture_page": 1,
     "source_crop_pt": [
-      166.0,
-      363.3,
-      429.3,
-      473.0
+      0,
+      0,
+      289.9219970703125,
+      134.25103759765625
     ],
     "source_physical_size_pt": [
-      263.3,
-      109.69999999999999
+      289.9219970703125,
+      134.25103759765625
     ],
     "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
-    "display_body_font_pt": 10,
+    "display_body_font_pt": 8.9664,
     "display_physical_size_pt": [
-      330.3597106933594,
-      137.63941955566406
+      289.9219970703125,
+      134.25103759765625
     ],
-    "proportional_scale_from_prior_pdf": 1.2546894132888482
+    "nominal_tex_font_pt": 9,
+    "display_typeface": "CM Sans (SFSS0900); STIX mathematics",
+    "generation_method": "Recompiled preserved TeX cells with main-manuscript CAS table typography; natural-size crop"
   },
   {
     "label": "Table S8",
@@ -249,24 +267,26 @@
     "tex": "appendix/tables/Table_S8.tex",
     "caption": "Table S8. Step-12 relative view distance and descriptive association with forecasting error. Pearson limits denote the observed range across five batches.",
     "in_main_manuscript": false,
-    "capture_source": "appendix/supplementary_results.pdf",
-    "capture_page": 4,
+    "capture_source": "appendix/tables/Table_S8.tex",
+    "capture_page": 1,
     "source_crop_pt": [
-      188.5,
-      520.3,
-      406.8,
-      601.6
+      0,
+      0,
+      241.43997192382812,
+      98.7440185546875
     ],
     "source_physical_size_pt": [
-      218.3,
-      81.30000000000007
+      241.43997192382812,
+      98.7440185546875
     ],
     "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
-    "display_body_font_pt": 10,
+    "display_body_font_pt": 8.9664,
     "display_physical_size_pt": [
-      273.8987121582031,
-      102.00625610351562
+      241.43997192382812,
+      98.7440185546875
     ],
-    "proportional_scale_from_prior_pdf": 1.2546894132888482
+    "nominal_tex_font_pt": 9,
+    "display_typeface": "CM Sans (SFSS0900); STIX mathematics",
+    "generation_method": "Recompiled preserved TeX cells with main-manuscript CAS table typography; natural-size crop"
   }
 ]
