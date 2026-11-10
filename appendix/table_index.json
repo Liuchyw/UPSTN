@@ -18,7 +18,13 @@
       301.74798583984375,
       89.37603759765625
     ],
-    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
+    "display_body_font_pt": 10,
+    "display_physical_size_pt": [
+      336.53192138671875,
+      99.67884063720703
+    ],
+    "proportional_scale_from_prior_pdf": 1.1152747854913534
   },
   {
     "label": "Table S10",
@@ -39,7 +45,13 @@
       298.20000000000005,
       71.80000000000007
     ],
-    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
+    "display_body_font_pt": 10,
+    "display_physical_size_pt": [
+      374.1484069824219,
+      90.08670043945312
+    ],
+    "proportional_scale_from_prior_pdf": 1.2546894132888482
   },
   {
     "label": "Table S9 (panel a)",
@@ -60,7 +72,13 @@
       317.822998046875,
       210.583984375
     ],
-    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
+    "display_body_font_pt": 10,
+    "display_physical_size_pt": [
+      319.01611328125,
+      211.37452697753906
+    ],
+    "proportional_scale_from_prior_pdf": 1.0037540648614571
   },
   {
     "label": "Table S9 (panel b)",
@@ -81,7 +99,13 @@
       122.1,
       45.099999999999966
     ],
-    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
+    "display_body_font_pt": 10,
+    "display_physical_size_pt": [
+      153.19757080078125,
+      56.586490631103516
+    ],
+    "proportional_scale_from_prior_pdf": 1.2546894132888482
   },
   {
     "label": "Table S2",
@@ -102,7 +126,13 @@
       354.5,
       204.29999999999995
     ],
-    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
+    "display_body_font_pt": 10,
+    "display_physical_size_pt": [
+      444.7873840332031,
+      256.3330383300781
+    ],
+    "proportional_scale_from_prior_pdf": 1.2546894132888482
   },
   {
     "label": "Table S4",
@@ -123,7 +153,13 @@
       274.1,
       137.99999999999997
     ],
-    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
+    "display_body_font_pt": 10,
+    "display_physical_size_pt": [
+      343.9103698730469,
+      173.1471405029297
+    ],
+    "proportional_scale_from_prior_pdf": 1.2546894132888482
   },
   {
     "label": "Table S5",
@@ -144,7 +180,13 @@
       335.4,
       213.79999999999995
     ],
-    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
+    "display_body_font_pt": 10,
+    "display_physical_size_pt": [
+      420.82281494140625,
+      268.2525939941406
+    ],
+    "proportional_scale_from_prior_pdf": 1.2546894132888482
   },
   {
     "label": "Table S6",
@@ -165,7 +207,13 @@
       226.7,
       166.5
     ],
-    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
+    "display_body_font_pt": 10,
+    "display_physical_size_pt": [
+      284.4380798339844,
+      208.90579223632812
+    ],
+    "proportional_scale_from_prior_pdf": 1.2546894132888482
   },
   {
     "label": "Table S7",
@@ -186,7 +234,13 @@
       263.3,
       109.69999999999999
     ],
-    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
+    "display_body_font_pt": 10,
+    "display_physical_size_pt": [
+      330.3597106933594,
+      137.63941955566406
+    ],
+    "proportional_scale_from_prior_pdf": 1.2546894132888482
   },
   {
     "label": "Table S8",
@@ -207,6 +261,12 @@
       218.3,
       81.30000000000007
     ],
-    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table"
+    "response_color": "all blue (RGB 35, 82, 163); response-only appendix table",
+    "display_body_font_pt": 10,
+    "display_physical_size_pt": [
+      273.8987121582031,
+      102.00625610351562
+    ],
+    "proportional_scale_from_prior_pdf": 1.2546894132888482
   }
 ]
